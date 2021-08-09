@@ -107,7 +107,7 @@ class InputFieldArea extends StatelessWidget {
           onFieldSubmitted: (term) {
             textAction == TextInputAction.next
                 ? TextUtil.fieldFocusChange(context, firstFocus, nextFocus)
-                : onKeyBoardKeyEvent(textAction);
+                : null;
           },
           onChanged: (text) {
             onValueChanged(text.trim());
@@ -162,7 +162,7 @@ class InputFieldArea extends StatelessWidget {
         if (onFieldError != null)
           onFieldError(firstFocus != null ? firstFocus : FocusNode());
         return (regexError == null || regexError.isEmpty)
-            ? "error"
+            ? "This field is mandatory!"
             : regexError;
       }
     }

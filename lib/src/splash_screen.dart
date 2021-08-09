@@ -32,7 +32,12 @@ class _SplashScreenState extends State<SplashScreen> {
     // ignore: unnecessary_statements
     return Scaffold(
       body: Container(
-        child: Text("Splash Scree..."),
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("assets/ic_screen.png"),
+            fit: BoxFit.cover,
+          ),
+        ),
       ),
     );
   }
